@@ -13,7 +13,7 @@ def prof(id):
     with open('candidates.json') as f:
         candidates = json.load(f)
     for candidate in candidates:
-        if candidate[id] == int(id):
+        if candidate['id'] == int(id):
             return render_template("candidate.html", **candidate)
 
 if __name__=="__main__":
