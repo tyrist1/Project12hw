@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>search</title>
+</head>
+<body>
+<form action="/search/">
+    <input type="text" class="text-input" placeholder="введите заданный параметр" name="name">
+</form>
+<p>найдено {{cnt}}</p>
+<br/>
+{% for user in users %}
+{{user}}
+<br/>
+{% endfor %}
+</body>
+</html>
