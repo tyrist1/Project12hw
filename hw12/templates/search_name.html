@@ -11,7 +11,8 @@
 <p>найдено {{cnt}}</p>
 <br/>
 {% for user in users %}
-{{user}}
+<p><a href="/candidate/{{user.id}}">{{user.name }}</a></p>
+<img src={{user.picture}} width=200/>
 <br/>
 {% endfor %}
 </body>

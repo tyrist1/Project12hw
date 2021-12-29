@@ -8,6 +8,7 @@
 <h1>Все кандидаты</h1>
 {% for q in users %}
 <p><a href="/candidate/{{q.id}}">{{q.name}}</a></p>
+<img src={{q.picture}} width=200/>
 {% endfor %}
 </body>
 </html>

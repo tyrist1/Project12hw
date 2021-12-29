@@ -30,7 +30,7 @@ def search_candidate():
     if name:
         for candidate in candidates:
             if name in candidate['name']:
-                users.append(candidate['name'])
+                users.append(candidate)
     return render_template("search_name.html", users=users, cnt=len(users))
 
 @app.route('/skill/<skill>')
@@ -42,8 +42,8 @@ def search_skill(skill):
     users = []
     cnt = 0
     for candidate in candidates:
-        if skill in candidate['skills']:
-            users.append(candidate['name'])
+        if skill in candidate['name']:
+            users.append(candidate)
             cnt += 1
             if settings['limit'] == cnt:
                 return render_template("search_name.html", users=users, cnt=len(users))
