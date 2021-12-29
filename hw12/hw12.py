@@ -42,11 +42,11 @@ def search_skill(skill):
     users = []
     cnt = 0
     for candidate in candidates:
-        if skill in candidate['name']:
+        if skill in candidate['skills']:
             users.append(candidate)
             cnt += 1
             if settings['limit'] == cnt:
                 return render_template("search_name.html", users=users, cnt=len(users))
-        return render_template("search_name.html", users=users, cnt=len(users))
+    return render_template("search_name.html", users=users, cnt=len(users))
 if __name__=="__main__":
     app.run()
